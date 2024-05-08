@@ -11,4 +11,8 @@ public class Calculator {
     return a / b;
   }
   int mod(int a, int b){ return a % b; }
+
+  int suma3(int a, int b, int c) {
+    return a + b + c;
+  }
 }
