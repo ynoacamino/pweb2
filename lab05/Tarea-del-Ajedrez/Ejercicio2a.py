@@ -1,7 +1,7 @@
 from interpreter import draw
 from chessPictures import *
 
-draw(knight.verticalMirror())
+knight_row = knight.join(knight.negative())
 
-print("awda")
-print("111", square)
+draw(knight_row.up(knight_row.negative()))
+
