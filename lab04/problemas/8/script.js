@@ -15,7 +15,7 @@ xhr.onreadystatechange = function () {
     function drawBasic() {
       var data = new google.visualization.DataTable();
       data.addColumn('number', 'X');
-      //data.addColumn('number', 'Arequipa');
+ 
       noLimaCallao.forEach((region) => {
         data.addColumn('number', region.region);
       })

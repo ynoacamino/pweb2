@@ -5,6 +5,8 @@ const app = express();
 
 app.use(cors());
 
+app.use(express.static('public'));
+
 app.get('/data', (req, res) => {
   res.sendFile(__dirname + '/data.json');
 });
