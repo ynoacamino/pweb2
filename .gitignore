@@ -1,2 +1,9 @@
 **/node_modules
 package-lock.json
+
+*.swp
+__pycache__
+
+bin
+include
+lib
