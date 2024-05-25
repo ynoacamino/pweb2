@@ -52,9 +52,16 @@ class Picture:
   def under(self, p):
     """ Devuelve una nueva figura poniendo la figura p sobre la
         figura actual """
-    img = p.img[:]
-    for line in self.img:
-      img.append(line)
+    img = self.img[:]
+
+    for i, line in enumerate(self.img):
+      str = ""
+      for j, char in enumerate(line):
+        if p.img[i][j] == " ":
+          str += char
+        else:
+          str += p.img[i][j]
+      img[i] = str
 
     return Picture(img)
   
