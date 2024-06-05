@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white flex flex-col items-center justify-start">
+  <header class="w-full px-4 border-b border-gray-300 flex justify-center items-center">
+    <div class="w-full max-w-6xl flex justify-between items-center">
+      <h1 class="text-2xl font-bold items-center">Tours</h1>
+      <nav class="flex items-center justify-between py-4 gap-6">
+        <a href="/" class="text-blue-500">Home</a>
+        <a href="/addTour" class="text-blue-500">Add Tour</a>
+        <a href="/tours" class="text-blue-500">Tours</a>
+      </nav>
+    </div>
+  </header>
+  <main class="w-full max-w-6xl px-4">
+    {% block content %}
+    {% endblock %}
+  </main>
+  <footer>
+    <div class="w-full max-w-6xl mx-auto py-4">
+      <p class="text-center text-gray-500">© 2020 Tours</p>
+    </div>
+  </footer>
+</body>
+</html>

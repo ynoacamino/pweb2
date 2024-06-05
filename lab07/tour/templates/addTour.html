@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+<h2 class="pt-8 pb-4 text-2xl font-bold">
+  Agrega un nuevo tour
+</h2>
+<form class="flex flex-col gap-4" method="post" enctype="multipart/form-data">
+  <div class="">
+    <label for="cityName" class="block text-sm font-medium text-gray-700">Nombre de la ciudad</label>
+    <input type="text" id="cityName" name="cityName" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+  </div>
+  <div class="">
+    <label for="cityDescription" class="block text-sm font-medium text-gray-700">Descripción de la ciudad</label>
+    <textarea id="cityDescription" name="cityDescription" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"></textarea>
+  </div>
+  <div class="">
+    <label for="price" class="block text-sm font-medium text-gray-700">Precio</label>
+    <input type="number" id="price" name="price" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+  </div>
+  <div class="">
+    <label for="isOffer" class="block text-sm font-medium text-gray-700">
+      Oferta
+    </label>
+    <input type="checkbox" id="isOffer" name="isOffer" class="">
+  </div>
+  <div>
+    <label for="cityImage">Imagen</label>
+    <input type="file" id="cityImage" name="cityImage" class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+  </div>
+  <div class="flex justify-end">
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Guardar
+    </button>
+  </div>
+</form>
+
+{% endblock %}

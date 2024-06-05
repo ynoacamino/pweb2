@@ -40,8 +40,6 @@ class Picture:
     return Picture(img)
 
   def up(self, p):
-    """ Devuelve una nueva figura poniendo la figura p debajo de la
-        figura actual """
     img = self.img[:]
 
     for line in p.img:
@@ -50,8 +48,6 @@ class Picture:
     return Picture(img)
 
   def under(self, p):
-    """ Devuelve una nueva figura poniendo la figura p sobre la
-        figura actual """
     img = self.img[:]
 
     for i, line in enumerate(self.img):
