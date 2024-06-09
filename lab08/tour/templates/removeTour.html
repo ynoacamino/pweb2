@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+<h2 class="pt-8 pb-4 text-2xl font-bold">
+  Eliminar un tour
+</h2>
+<form class="flex flex-col gap-4" method="post" enctype="multipart/form-data">
+  <p>
+    ¿Estás seguro de que deseas eliminar el tour de {{ tour.cityName }}?
+  </p>
+  <div class="flex justify-end">
+    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+      Guardar
+    </button>
+  </div>
+</form>
+
+{% endblock %}
