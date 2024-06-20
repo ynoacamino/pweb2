@@ -1,0 +1,29 @@
+<div class="flex flex-col gap-10 mt-20 ">
+  <!-- <h1>
+    Escribe una letra y comprueba si está en la palabra
+  </h1> -->
+
+  <div class="flex justify-center gap-4">
+    <input
+      type="text"
+      name="letter"
+      id="letter"
+      [maxLength]="1"
+      class="w-12 px-4 py-2 rounded-md text-2xl"
+      value="{{userLetter}}"
+      (change)="changeLetter($event)"
+    >
+    <button class="bg-gradient-to-r from-red-500 to-orange-500 px-6 py-3 rounded-md font-bold text-white hover:scale-105 active:scale-95 transition-transform" (click)="userTry()">
+      Comprobar
+    </button>
+  </div>
+
+  <div class="flex justify-center gap-2">
+    @for (letter of userWord; track $index) {
+      <span class="w-10 border-b-2 h-14 text-center text-3xl flex justify-center items-end font-bold">
+        <!-- letra en ingles -->
+        {{letter}}
+      </span>
+    }
+  </div>
+</div>

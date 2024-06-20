@@ -1,0 +1,18 @@
+<main class="w-full max-w-6xl bg-white/70 rounded-md backdrop-blur-sm px-10 py-10 flex flex-col items-center">
+  <h1 class="text-3xl font-bold text-center">
+    {{title}}
+  </h1>
+  <app-display
+    [tries_number]="tries_number"
+    [wordPrimary]="wordPrimary"
+  >
+  </app-display>
+  <input-text
+    [MAX_TRIES]="MAX_TRIES"
+    [tries_number]="tries_number"
+    [wordPrimary]="wordPrimary"
+    (addTries)="addTries_number()"
+  ></input-text>
+</main>
+
+<router-outlet />
