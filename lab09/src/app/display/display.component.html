@@ -1,8 +1,128 @@
-<p class="flex flex-col gap-1 justify-center items-center mt-4">
+<style>
+  .ahorcado {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .poste {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 200px;
+    background: #000;
+  }
+
+  .viga {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 10px;
+    background: #000;
+  }
+
+  .cuerda {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background: #000;
+  }
+
+  .cabeza {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000;
+  }
+
+  .cuerpo {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 60px;
+    background: #000;
+  }
+
+  .brazo-izquierdo,
+  .brazo-derecho {
+    position: absolute;
+    top: 110px;
+    width: 40px;
+    height: 2px;
+    background: #000;
+  }
+
+  .brazo-izquierdo {
+    left: calc(50% - 40px);
+    transform: rotate(-35deg);
+  }
+
+  .brazo-derecho {
+    left: 50%;
+    transform: rotate(35deg);
+  }
+
+  .pierna-izquierda,
+  .pierna-derecha {
+    position: absolute;
+    top: 144px;
+    width: 2px;
+    height: 50px;
+    background: #000;
+  }
+
+  .pierna-izquierda {
+    left: calc(50% - 15px);
+    transform: rotate(35deg);
+  }
+
+  .pierna-derecha {
+    left: calc(50% + 15px);
+    transform: rotate(-35deg);
+  }
+</style>
+
+<div class="flex flex-col gap-1 justify-center items-center mt-4">
   <span class="text-xl">
     Numero de intentos fallidos!
   </span>
   <span class="text-2xl font-bold text-red-600">
     {{tries_number}}
-  </span> 
-</p>
+  </span>
+  <div class="ahorcado bg-white/60 rounded-md">
+    <div class="viga"></div>
+    <div class="cuerda"></div>
+    @if (tries_number >= 1) {
+      <div class="cabeza"></div> <!-- Figura 1: La cabeza -->
+    }
+    @if (tries_number >= 2) {
+      <div class="cuerpo"></div> <!-- Figura 2: El cuerpo -->
+    }
+    @if (tries_number >= 3) {
+      <div class="brazo-izquierdo"></div> <!-- Figura 3: El brazo izquierdo -->
+    }
+    @if (tries_number >= 4) {
+      <div class="brazo-derecho"></div> <!-- Figura 4: El brazo derecho -->
+    }
+    @if (tries_number >= 5) {
+      <div class="pierna-izquierda"></div> <!-- Figura 5: La pierna izquierda -->
+    }
+    @if (tries_number >= 6) {
+      <div class="pierna-derecha"></div> <!-- Figura 6: La pierna derecha -->
+    }
+  </div>
+</div>
